@@ -22,11 +22,9 @@ export const useAlumni = defineStore('alumni', {
             try {
                 this.loading = true
                 const res = await axiosPost('/alumni/list', {
-                    ...payload,
-                    start: payload.start === "start" ? this.start : 0
+                    ...payload
                 })
                 this.loading = false
-                console.log(res, 'resss')
                 if (res.data.status) {
                     this.start = res.data.data.start
                     if (payload.mode === "next") {

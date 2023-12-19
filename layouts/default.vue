@@ -4,6 +4,5 @@
             Tidak terhubung, Periksa Jaringan Anda.
         </div>
         <slot />
-        <AppFooter />
     </div>
 </template>
