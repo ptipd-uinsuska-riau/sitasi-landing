@@ -1,24 +1,31 @@
-# Nuxt dev/build outputs
-.output
-.data
-.nuxt
-.nitro
-.cache
-dist
+# Nuxt 3
+.nuxt/
+dist/
 
-# Node dependencies
-node_modules
+.env
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Node.js
+node_modules/
+npm-debug.log
 
 # Logs
 logs
 *.log
+npm-debug.log*
 
-# Misc
-.DS_Store
-.fleet
-.idea
+# Dependency directories
+.jest/
 
-# Local env files
-.env
-.env.*
-!.env.example
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
