@@ -6,12 +6,12 @@
             <div class="md:flex justify-between">
                 <div>
                     <div data-aos="zoom-in">
-                        <h1 class="text-7xl mb-28"><strong>SITASI</strong></h1>
+                        <h1 class="text-center md:text-left text-7xl md:mb-28"><strong>SITASI</strong></h1>
                     </div>
-                    <div>
+                    <div class="text-center md:text-left text-sm md:text-lg">
                         <div class="my-2" data-aos="fade-up">
                             <p class=""><i
-                                    class="fas fa-check border text-sm border-green-500 text-sky-500 rounded-full mr-4 px-1"></i>
+                                    class="fas fa-check border text-sm border-green-500 text-sky-500 rounded-full mr-4 px-1 hidden md:inline-block"></i>
                                 Pengajuan
                                 Tugas
                                 Akhir,
@@ -20,28 +20,28 @@
                         </div>
                         <div class="my-2" data-aos="fade-up">
                             <p><i
-                                    class="fas fa-check border text-sm border-green-500 text-sky-500 rounded-full mr-4 px-1"></i>
+                                    class="fas fa-check border text-sm border-green-500 text-sky-500 rounded-full mr-4 px-1 hidden md:inline-block"></i>
                                 Statistik
                                 Alumni, Pendataan, Prestasi</p>
                         </div>
                         <div class="my-2" data-aos="fade-up">
                             <p><i
-                                    class="fas fa-check border text-sm border-green-500 text-sky-500 rounded-full mr-4 px-1"></i>
+                                    class="fas fa-check border text-sm border-green-500 text-sky-500 rounded-full mr-4 px-1 hidden md:inline-block"></i>
                                 Penilaian,
                                 Arsip, Berkas Tugas Akhir</p>
                         </div>
                     </div>
 
-                    <div class="text-center md:flex mt-10 md:gap-2" data-aos="fade-up">
-                        <div class="self-center">
+                    <div class="text-center md:flex items-center mt-10 md:gap-2" data-aos="fade-up">
+                        <div class="mb-4 md:mb-0">
                             <button @click.prevent="showAction = true"
-                                class="border  bg-sky-500 text-white rounded-full px-5 py-2 md:px-10 md:py-4 text-xl hover:bg-sky-600 hover:text-white active:bg-sky-800">
+                                class=" w-full md:block border  bg-sky-500 text-white rounded-full px-5 py-2 md:px-10 md:py-4 text-xl hover:bg-sky-600 hover:text-white active:bg-sky-800">
                                 Login
                             </button>
                         </div>
-                        <div class="self-center mt-4">
+                        <div class="">
                             <a href="/survei/"
-                                class="border  border-sky-500 text-sky-500 rounded-full  px-5 py-2 md:px-10 md:py-4 text-xl hover:bg-sky-600 hover:text-white active:bg-sky-800">
+                                class=" border inline-block w-full md:block  border-sky-500 text-sky-500 rounded-full  px-5 py-2 md:px-10 md:py-4 text-xl hover:bg-sky-600 hover:text-white active:bg-sky-800">
                                 Survei Pengguna
                             </a>
                         </div>
@@ -70,26 +70,27 @@
                     </div>
                 </div>
             </div>
-            <div class="md:flex justify-between pt-36" data-aos="fade-up">
+            <div class="hidden md:flex justify-between pt-36" data-aos="fade-up">
                 <div>
-                    <h1 class="text-sky-400 bg-gray-200 py-2 px-2 rounded-lg"><strong>Sistem informasi terintegrasi</strong>
+                    <h1 class="text-sky-400 bg-gray-200 py-2 px-2 rounded-lg text-center"><strong>Sistem informasi
+                            terintegrasi</strong>
                     </h1>
                 </div>
 
-                <div class="md:flex gap-2 text-white">
-                    <strong class="bg-sky-300 py-2 px-2 rounded-lg">iRaise</strong>
-                    <strong class="bg-sky-300 py-2 px-2 rounded-lg">Alumni</strong>
-                    <strong class="bg-sky-300 py-2 px-2 rounded-lg">Seminar FST</strong>
+                <div class="flex gap-1 md:gap-2 text-white mt-3 justify-center">
+                    <div><strong class="bg-sky-300 py-2 px-2 rounded-lg">iRaise</strong></div>
+                    <div> <strong class="bg-sky-300 py-2 px-2 rounded-lg">Alumni</strong></div>
+                    <div> <strong class="bg-sky-300 py-2 px-2 rounded-lg">Seminar FST</strong></div>
                 </div>
             </div>
 
             <!-- slider -->
-            <div class="md:flex justify-between  mt-20" data-aos="fade-up">
-                <div class="font-bold text-xl">
+            <div class="flex justify-between  mt-20" data-aos="fade-up">
+                <div class="font-bold md:text-xl">
                     <h1>Seminar dan Sidang</h1>
                 </div>
-                <div class="self-center text-sky-500">
-                    <nuxt-link to="/"> Lihat Selengkapnya <i class="fas fa-arrow-right ml-2"></i></nuxt-link>
+                <div class="self-center text-sky-500 text-sm md:block">
+                    <nuxt-link to="/"> Selengkapnya <i class="fas fa-arrow-right ml-2"></i></nuxt-link>
                 </div>
             </div>
             <div class="grid grid-cols-1" data-aos="fade-up">
@@ -114,12 +115,11 @@
 
     <!-- section 2 -->
     <div class="bg-gray-50 min-h-screen">
-
         <div class="w-5/6 mx-auto py-20">
-            <div class="bg-sky-200 w-max px-4 py-2 rounded-full text-sky-500 mb-2" data-aos="fade-up">
+            <div class="hidden md:block bg-sky-200 w-max px-4 py-2 rounded-full text-sky-500 mb-2" data-aos="fade-up">
                 Statistik Alumni
             </div>
-            <h1 class="text-7xl my-4" data-aos="fade-up"><strong>Alumni</strong></h1>
+            <h1 class="text-4xl md:text-7xl my-4" data-aos="fade-up"><strong>Alumni</strong></h1>
             <div class="border p-4 rounded-xl">
                 <div class="flex py-5 justify-between">
                     <div data-aos="fade-up">
@@ -132,7 +132,8 @@
                 <div class="md:flex justify-start gap-5 ">
                     <div class="">
 
-                        <div class="bg-violet-100 w-40 flex justify-between px-4 py-6 rounded-xl mb-4" data-aos="fade-right">
+                        <div class="bg-violet-100 md:w-[400px] flex justify-between px-4 py-6 rounded-lg mb-4 gap-2 md:gap-4"
+                            data-aos="fade-right">
                             <div class="self-center">
                                 <h1 class="mb-2 text-sm">Alumni</h1>
                                 <h1 class="text-3xl mb-4"><strong>72.000</strong></h1>
@@ -146,7 +147,8 @@
                             </div>
                         </div>
 
-                        <div class="bg-blue-100 flex justify-between px-4 py-6 rounded-xl mb-4" data-aos="fade-right">
+                        <div class="bg-blue-100 md:w-[400px] flex justify-between px-4 py-6 rounded-lg mb-4 gap-2 md:gap-4"
+                            data-aos="fade-right">
                             <div class="self-center">
                                 <h1 class="mb-2 text-sm">Alumni</h1>
                                 <h1 class="text-3xl mb-4"><strong>72.000</strong></h1>
@@ -160,7 +162,8 @@
                             </div>
                         </div>
 
-                        <div class="bg-red-100 flex justify-between px-4 py-6 rounded-xl" data-aos="fade-light">
+                        <div class="bg-red-100 md:w-[400px] flex justify-between px-4 py-6 rounded-lg gap-2 md:gap-4"
+                            data-aos="fade-light">
                             <div class="self-center">
                                 <h1 class="mb-2 text-sm">Alumni</h1>
                                 <h1 class="text-3xl mb-4"><strong>72.000</strong></h1>
@@ -174,9 +177,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="">
-                        <div class="w-[680px] md:h-[475px] bg-gray-200 rounded-lg" data-aos="fade-left">
-
+                    <div class="mt-4">
+                        <div class=" md:w-[735px] md:h-[475px] bg-gray-200 rounded-lg" data-aos="fade-right">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo accusamus
+                                libero in atque
+                                placeat eius eos! Quo nostrum ducimus ipsa. Delectus expedita debitis temporibus aliquam est
+                                officia minus rerum laudantium?</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +193,7 @@
     <!-- section 3 -->
     <div class="bg-slate-100 min-h-screen">
         <div class="w-5/6 mx-auto py-20">
-            <h1 class="text-7xl my-4" data-aos="fade-up"><strong>Fitur</strong></h1>
+            <h1 class="text-4xl md:text-7xl my-4" data-aos="fade-up"><strong>Fitur</strong></h1>
             <div class="md:flex py-5 justify-between ">
                 <div class="md:w-2/5" data-aos="fade-up">
                     <p class="text-xl text-gray-500">Mengelola tugas akhir dengan mudah dan efisien. Sistem kami
@@ -219,7 +225,7 @@
                     </div>
                 </div>
 
-                <div class="border p-4 rounded-lg" data-aos="fade-left">
+                <div class="border p-4 rounded-lg" data-aos="fade-right">
                     <div class="flex justify-start gap-6">
                         <div class="bg-sky-200 px-3 py-2 w-max h-max rounded-md">
                             <i class="fas fa-file-circle-check text-2xl text-sky-500"></i>
@@ -280,11 +286,11 @@
     <!-- section 4 -->
     <div class="min-h-screen mb-4">
         <div class="w-5/6 mx-auto pt-20">
-            <img class="w-[100px]" data-aos="fade-up" src="../public/logo-ori.jpeg" alt="">
-            <h1 class="text-7xl my-4" data-aos="fade-up"><strong>Need Help</strong></h1>
-            <h1 class="text-7xl my-4 font-thin" data-aos="fade-up">with anything?</h1>
+            <img class="w-[50px] md:w-[100px]" data-aos="fade-up" src="../public/logo-ori.jpeg" alt="">
+            <h1 class="text-4xl md:text-7xl my-4" data-aos="fade-up"><strong>Need Help</strong></h1>
+            <h1 class="text-2xl md:text-7xl my-4 font-thin" data-aos="fade-up">with anything?</h1>
             <div class="md:flex justify-between" data-aos="fade-up">
-                <div class="my-20 ">
+                <div class="my-10 md:my-20 ">
                     <nuxt-link class="text-sky-500" to="/">Gabung ke grup diskusi SITASI</nuxt-link>
                     <div class="md:w-2/4 mt-7">
                         <p class="w-full">Jl. H.R. Soebrantas KM. 15 No. 155 Tuah Madani Kec. Tuah Madani – Pekanbaru 28298
@@ -303,6 +309,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- footer -->
     <div class="md:flex justify-end px-5 py-4 border-t bg-slate-100">
