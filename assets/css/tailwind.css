@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-default {
+    @apply text-gray-500 text-sm;
+  }
+}
