@@ -1,6 +1,7 @@
 <template>
     <div>
         <topbar />
+
         <!-- section 1 -->
         <div class="bg-slate-100 min-h-screen">
             <div class="w-5/6 mx-auto py-20">
@@ -137,22 +138,21 @@
                                 data-aos="fade-right">
                                 <div class="self-center">
                                     <h1 class="mb-2 text-sm">Alumni</h1>
-                                    <h1 class="text-3xl mb-4"><strong>72.000</strong></h1>
+                                    <h1 class="text-3xl mb-4"><strong>{{ alumni.count }}</strong></h1>
                                     <p class="text-sm text-default"><i
                                             class="fas fa-arrow-up text-sm mr-2 text-green-500"></i>
-                                        25%
+                                        9.5%
                                     </p>
                                 </div>
                                 <div class="self-center">
-                                    <div class="bg-white w-32 h-20">
-                                    </div>
+                                    <randomchart />
                                 </div>
                             </div>
 
                             <div class="bg-blue-100 md:w-[400px] flex justify-between px-4 py-6 rounded-lg mb-4 gap-2 md:gap-4"
                                 data-aos="fade-right">
                                 <div class="self-center">
-                                    <h1 class="mb-2 text-sm">Alumni</h1>
+                                    <h1 class="mb-2 text-sm">Alumni Telah isi Kuisioner</h1>
                                     <h1 class="text-3xl mb-4"><strong>72.000</strong></h1>
                                     <p class="text-sm text-default"><i
                                             class="fas fa-arrow-up text-sm mr-2 text-green-500"></i>
@@ -160,15 +160,14 @@
                                     </p>
                                 </div>
                                 <div class="self-center">
-                                    <div class="bg-white w-32 h-20">
-                                    </div>
+                                    <randomchart />
                                 </div>
                             </div>
 
                             <div class="bg-red-100 md:w-[400px] flex justify-between px-4 py-6 rounded-lg gap-2 md:gap-4"
                                 data-aos="fade-light">
                                 <div class="self-center">
-                                    <h1 class="mb-2 text-sm">Alumni</h1>
+                                    <h1 class="mb-2 text-sm">Pengguna Alumni</h1>
                                     <h1 class="text-3xl mb-4"><strong>72.000</strong></h1>
                                     <p class="text-sm text-default"><i
                                             class="fas fa-arrow-up text-sm mr-2 text-green-500"></i>
@@ -176,16 +175,16 @@
                                     </p>
                                 </div>
                                 <div class="self-center">
-                                    <div class="bg-white w-32 h-20">
-                                    </div>
+                                    <randomchart />
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-4">
+                        <div class="">
                             <div class=" md:w-[735px] md:h-[475px] bg-gray-200 rounded-lg" data-aos="fade-right">
-                                <chart />
+
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -328,5 +327,11 @@
 
 <script setup>
 const showAction = ref(false);
-</script>
 
+import { useAlumni } from "@/store/alumni";
+
+const alumni = useAlumni()
+
+alumni.getCount();
+
+</script>

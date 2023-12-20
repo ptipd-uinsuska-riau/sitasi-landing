@@ -15,7 +15,8 @@ export const useAlumni = defineStore('alumni', {
         detail: {},
         loadingLog: false,
         errorLog: '',
-        log: []
+        log: [],
+        count: ''
     }),
     actions: {
         async getData(payload) {
@@ -53,6 +54,24 @@ export const useAlumni = defineStore('alumni', {
                 const res = await axiosGet(`/alumni/` + payload)
                 if (res.data.status) {
                     this.detail = res.data.data
+                } else {
+                    this.error = res.data.message
+                }
+                this.loading = false
+            } catch (error) {
+                this.loading = false
+                this.error = error
+            }
+        },
+
+        async getCount() {
+            try {
+                this.loading = true
+                const res = await axiosGet(`/alumni/count/sif`)
+
+                console.log(res.data);
+                if (res.data.status) {
+                    this.count = res.data.data
                 } else {
                     this.error = res.data.message
                 }
