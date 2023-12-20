@@ -47,7 +47,7 @@
                                     <td class="px-4 py-2"></td>
                                 </tr>
                             </thead>
-
+                            
                             <tr v-for="(d, i) in alumni.data" :key="i" class="hover:bg-sky-50">
                                 <td class="pl-4 w-14">
                                     <img v-if="d.foto_profil" :src="d.foto_profil" alt=""

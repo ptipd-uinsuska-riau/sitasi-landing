@@ -41,6 +41,8 @@ export default defineNuxtConfig({
     public: {
       apiURL: process.env.API_URL_IRAISE, // panggil dari .env
       apiKEY: process.env.API_KEY_IRAISE, // panggil dari .env
+      apiURLSITASI: process.env.API_URL_SITASI,
+      apiKEYSITASI: process.env.API_KEY_SITASI,
     },
   },
 });

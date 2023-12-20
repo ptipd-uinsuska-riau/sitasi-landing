@@ -1,7 +1,6 @@
 <template>
     <div>
         <topbar />
-
         <!-- section 1 -->
         <div class="bg-slate-100 min-h-screen">
             <div class="w-5/6 mx-auto py-20">
@@ -97,16 +96,33 @@
                 </div>
                 <div class="grid grid-cols-1" data-aos="fade-up">
                     <div class="flex gap-2 mt-4 overflow-x-auto pb-4">
-                        <div v-for="i in 8" :key="i" class="flex  flex-shrink-0  border p-4 gap-4 bg-white rounded-lg">
-                            <div class="w-14 h-14 rounded-full bg-blue-200">
-                                <img class="object-cover w-14 h-14 rounded-full" src="../public/uin.jpeg" alt="">
+                        <div v-for="(d, i) in seminarSidang.data" :key="i"
+                            class="flex-shrink-0 bg-white border rounded-lg p-2">
+                            <div class="relative">
+                                <div class="flex gap-2 w-full">
+                                    <div>
+                                        <img class="w-10 h-10 rounded-full" src="../public/uin.jpeg" alt="">
+                                    </div>
+                                    <div class="text-sm pr-28">
+                                        <h1 class="inline-block">{{ d.nama }}</h1>
+                                        <p>{{ d.nim }}</p>
+                                    </div>
+                                </div>
+                                <div class="absolute top-0 right-0">
+                                    <div class="text-sm px-2 py-1 bg-sky-400 rounded-full text-white ">
+                                        {{ d.jenis }}
+                                    </div>
+                                </div>
+
                             </div>
-                            <div>
-                                <h1 class="text-xl font-bold">Erno Irwandi</h1>
-                                <p class="font-thin">Senin, 18 Oktober 2021</p>
-                            </div>
-                            <div class="bg-sky-200 text-xl self-center py-2 px-2">
-                                <h1 class="text-white">09:00</h1>
+                            <div class="flex text-sm gap-4 text-gray-500 mt-4 justify-between w-full">
+                                <div class="self-center ">
+                                    <p class=""> <i class="fas fa-calendar-days text-sky-500 mr-2"></i>{{
+                                        useMomentDate(d.tanggal) }}</p>
+                                </div>
+                                <div class="text-sm px-2 py-1 self-center bg-sky-400 rounded-full text-white">
+                                    <i class="fas fa-clock"></i> {{ d.jam }}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -329,9 +345,13 @@
 const showAction = ref(false);
 
 import { useAlumni } from "@/store/alumni";
+import { useSeminarSidang } from "@/store/seminarSidang";
 
 const alumni = useAlumni()
+const seminarSidang = useSeminarSidang()
 
 alumni.getCount();
+
+seminarSidang.getData();
 
 </script>
