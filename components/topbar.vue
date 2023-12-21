@@ -8,7 +8,7 @@
                     <ul class="flex gap-6 text-default">
                         <li><a href="/" class="hover:text-sky-800">Beranda</a></li>
                         <li class="flex gap-2">
-                            <a href="#" class="hover:text-sky-800">Berkas</a>
+                            <a href="/berkas/" class="hover:text-sky-800">Berkas</a>
                         </li>
                         <li><a href="#" class="hover:text-sky-800">Alur</a></li>
                         <li><a href="#" class="hover:text-sky-800">Tugas Akhir</a></li>

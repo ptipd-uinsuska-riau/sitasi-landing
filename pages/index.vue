@@ -94,6 +94,7 @@
                         <nuxt-link to="/"> Selengkapnya <i class="fas fa-arrow-right ml-2"></i></nuxt-link>
                     </div>
                 </div>
+
                 <div class="grid grid-cols-1" data-aos="fade-up">
                     <div class="flex gap-2 mt-4 overflow-x-auto pb-4">
                         <div v-for="(d, i) in seminarSidang.data" :key="i"
