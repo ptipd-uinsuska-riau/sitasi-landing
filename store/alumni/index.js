@@ -69,7 +69,6 @@ export const useAlumni = defineStore('alumni', {
                 this.loading = true
                 const res = await axiosGet(`/alumni/count/sif`)
 
-                console.log(res.data);
                 if (res.data.status) {
                     this.count = res.data.data
                 } else {
