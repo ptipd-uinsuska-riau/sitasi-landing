@@ -3,7 +3,7 @@ module.exports = {
         {
             name: "sitasi-landing",
             exec_mode: "cluster",
-            port: 5000,
+            port: 3000,
             instances: "max", // sesuaikan dengan core atau bisa isi max untuk menggunakan semua core
             script: "./.output/server/index.mjs",
         },
