@@ -19,7 +19,7 @@
                                     <div class="flex gap-4">
                                         <div
                                             class="border rounded-lg p-6 text-gray-500 hover:border-sky-500 hover:bg-sky-100 hover:text-sky-500 hover:scale-105 transition-all duration-500">
-                                            <a class="" href="https://sitasi.uin-suska.ac.id/login">
+                                            <a class="" href="https://prodisi.uin-suska.ac.id/login">
                                                 <div class="flex gap-4 ">
                                                     <div class="self-center"><i class="fas fa-user text-4xl h-max"></i>
                                                     </div>
@@ -35,7 +35,7 @@
                                         </div>
                                         <div
                                             class="border rounded-lg p-6 text-gray-500 hover:border-sky-500 hover:bg-sky-100 hover:text-sky-500 hover:scale-105 transition-all duration-500">
-                                            <a class="" href="https://sitasi.uin-suska.ac.id/logindosen">
+                                            <a class="" href="https://prodisi.uin-suska.ac.id/logindosen">
                                                 <div class="flex gap-4 ">
                                                     <div class="self-center"><i class="fas fa-user text-4xl h-max"></i>
                                                     </div>
