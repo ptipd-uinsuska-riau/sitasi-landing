@@ -16,7 +16,7 @@
                                         <h1 class="mb-6 text-default mt-2">Silahkan Pilih Peran Anda untuk mulai mengakses
                                         </h1>
                                     </div>
-                                    <div class="flex gap-4">
+                                    <div class="md:flex gap-4">
                                         <div
                                             class="border rounded-lg p-6 text-gray-500 hover:border-sky-500 hover:bg-sky-100 hover:text-sky-500 hover:scale-105 transition-all duration-500">
                                             <a class="" href="https://prodisi.uin-suska.ac.id/login">

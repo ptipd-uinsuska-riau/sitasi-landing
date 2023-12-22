@@ -47,7 +47,7 @@
                                     <td class="px-4 py-2"></td>
                                 </tr>
                             </thead>
-                            
+
                             <tr v-for="(d, i) in alumni.data" :key="i" class="hover:bg-sky-50">
                                 <td class="pl-4 w-14">
                                     <img v-if="d.foto_profil" :src="d.foto_profil" alt=""
@@ -77,7 +77,7 @@
                                 </td>
                                 <td class="p-4 text-end">
                                     <a class="bg-sky-500 rounded-md  py-2 px-4 text-white focus:bg-sky-600 text-sm"
-                                        :href="`https://sitasi.uin-suska.ac.id/survey/pengguna_alumni/${d.nim}`"
+                                        :href="`https://prodisi.uin-suska.ac.id/survey/pengguna_alumni/${d.nim}`"
                                         target="_blank">Pilih</a>
                                 </td>
                             </tr>
