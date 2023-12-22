@@ -3,28 +3,30 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "node server/index.js",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "proxy": "node server/index.js",
     "start": "pm2 start .output/server/index.mjs --name sitasi-landing"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
     "@nuxt/devtools": "^1.0.6",
+    "autoprefixer": "^10.4.16",
     "nuxt": "^3.8.2"
   },
   "dependencies": {
-    "vue": "^3.3.10",
+    "@nuxtjs/tailwindcss": "^6.10.1",
     "@pinia/nuxt": "^0.4.11",
+    "aos": "^2.3.4",
     "apexcharts": "^3.45.0",
     "axios": "^1.6.2",
+    "http-proxy-middleware": "^2.0.6",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "pinia": "^2.1.6",
-    "vue3-apexcharts": "^1.4.4",
-    "@nuxtjs/tailwindcss": "^6.10.1",
-    "aos": "^2.3.4",
-    "vue-router": "^4.2.5"
+    "vue": "^3.3.10",
+    "vue-router": "^4.2.5",
+    "vue3-apexcharts": "^1.4.4"
   }
 }
