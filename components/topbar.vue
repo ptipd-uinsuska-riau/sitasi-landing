@@ -10,7 +10,7 @@
                         <li class="flex gap-2">
                             <a href="/berkas/" class="hover:text-sky-800">Berkas</a>
                         </li>
-                        <li><a href="#" class="hover:text-sky-800">Alur</a></li>
+                        <li><a href="/alur/" class="hover:text-sky-800">Alur</a></li>
                         <li><a href="#" class="hover:text-sky-800">Tugas Akhir</a></li>
                         <li><a href="#" class="hover:text-sky-800">Jadwal Sesi</a></li>
                         <li><a href="#" class="hover:text-sky-800">Seleksi Judul</a></li>
