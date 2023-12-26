@@ -26,6 +26,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  ssr: true,
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ["aos-vue"].includes(tag),
