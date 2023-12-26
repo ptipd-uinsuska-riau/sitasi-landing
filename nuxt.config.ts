@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss"],
   devtools: { enabled: true },
+  http: {
+    proxy: true, // Aktifkan proxy
+  },
+  proxy: {
+    "/api-iraise": process.env.API_URL_IRAISE, // Tentukan URL server API Anda
+    "/api-sitasi": process.env.API_URL_SITASI, // Tentukan URL server API Anda
+  },
   app: {
     pageTransition: {
       name: "page",
@@ -40,9 +47,9 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      apiURL: process.env.API_URL_IRAISE, // panggil dari .env
+      apiURL: "/api-iraise", // panggil dari .env
       apiKEY: process.env.API_KEY_IRAISE, // panggil dari .env
-      apiURLSITASI: process.env.API_URL_SITASI,
+      apiURLSITASI: "/api-sitasi",
       apiKEYSITASI: process.env.API_KEY_SITASI,
     },
   },
