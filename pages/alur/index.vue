@@ -129,7 +129,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p>{{ currentUrutanTa }} dari 9</p>
+                        <p>{{ currentUrutanTa }} dari 7</p>
                         <div class="my-10">
                             <p>{{ currentStepDescriptionTa }}
                             </p>

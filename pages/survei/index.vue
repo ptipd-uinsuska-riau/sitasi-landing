@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div>
-                        <img class="w-[500px]" src="../../public/uin.jpeg" alt="lulusan">
+                        <img class="w-[700px]" src="../../public/alumni.png" alt="lulusan">
                     </div>
                 </div>
 
