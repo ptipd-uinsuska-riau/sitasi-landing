@@ -47,7 +47,8 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      apiURL: "/api-iraise", // panggil proxy /api-iraise
+      // apiURL: "/api-iraise", // panggil proxy /api-iraise
+      apiURL:process.env.API_URL_IRAISE,,
       apiKEY: process.env.API_KEY_IRAISE,
       apiURLSITASI: "/api-sitasi", // panggil proxy /api-iraise
       apiKEYSITASI: process.env.API_KEY_SITASI,
