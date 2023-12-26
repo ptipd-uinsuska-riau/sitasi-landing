@@ -102,7 +102,9 @@
                             <div class="relative">
                                 <div class="flex gap-2 w-full">
                                     <div>
-                                        <img class="w-10 h-10 rounded-full" src="../public/uin.jpeg" alt="">
+                                        <!-- jika d.avatar !== '' d.avatar else ../public/uin.jpeg -->
+                                        <img class="w-10 h-10 rounded-full"
+                                            :src="d.avatar !== '' ? d.avatar : '../public/uin.jpeg'" alt="">
                                     </div>
                                     <div class="text-sm pr-28">
                                         <h1 class="inline-block">{{ d.nama }}</h1>
