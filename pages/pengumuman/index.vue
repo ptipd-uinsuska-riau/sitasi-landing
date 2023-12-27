@@ -43,49 +43,62 @@
                 </div>
 
                 <!-- filter table -->
-                <p>Anda memilih tahun: {{ selectedYear }}</p>
                 <div class="md:flex justify-between pt-10">
                     <div class="md:flex gap-2">
                         <div class="w-full md:w-52 mb-2">
-                            <select class=" w-full p-[11px] border border-sky-200 rounded-lg focus:border-sky-500"
-                                id="tahun" v-model="selectedYear" @change="handleChange">
+                            <select class="w-full p-[11px] border border-sky-200 rounded-lg focus:border-sky-500" id="tahun"
+                                v-model="selectedYear" @change="handleChange">
                                 <option value="" disabled selected>Tahun</option>
                                 <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
                             </select>
                         </div>
 
                         <div class="grid grid-cols-3 md:flex gap-2 text-sky-500 mb-2 justify-center w-full">
-                            <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
-                                1 </button>
-                            <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
-                                2 </button>
-                            <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
-                                3 </button>
-
+                            <button class="w-full py-2 px-2 border rounded-lg 
+                    focus:border-sky-500
+                    {{ sesi === '1' ? 'bg-sky-500 text-white' : 'border-sky-200 text-sky-500' }}"
+                                @click="setFilter(1)">
+                                Sesi 1
+                            </button>
+                            <button class="w-full py-2 px-2 border rounded-lg 
+                    focus:border-sky-500
+                    {{ sesi === '2' ? 'bg-sky-500 text-white' : 'border-sky-200 text-sky-500' }}"
+                                @click="setFilter(2)">
+                                Sesi 2
+                            </button>
+                            <button class="w-full py-2 px-2 border rounded-lg 
+                    focus:border-sky-500
+                    {{ sesi === '3' ? 'bg-sky-500 text-white' : 'border-sky-200 text-sky-500' }}"
+                                @click="setFilter(3)">
+                                Sesi 3
+                            </button>
                         </div>
+
                         <div class="md:w-80">
                             <input class="p-[10px] border border-sky-200 rounded-lg focus:border-sky-500 mb-2 w-full"
-                                type="text" placeholder="Nama Mahasiswa">
+                                type="text" v-model="nama" placeholder="Nama Mahasiswa">
                         </div>
-
-
                     </div>
 
                     <div class="md:flex gap-2">
                         <div class="mb-2">
                             <button
-                                class="w-full py-2 px-2 bg-sky-400 text-white border border-sky-200 rounded-lg focus:border-sky-500">
-                                <i class="fas fa-magnifying-glass"></i> Cari </button>
+                                class="w-full py-2 px-2 bg-sky-400 text-white border border-sky-200 rounded-lg focus:border-sky-500"
+                                @click="getDataAndSubmit">
+                                <i class="fas fa-magnifying-glass"></i> Cari
+                            </button>
                         </div>
 
                         <div class="mb-2">
                             <button
-                                class=" w-full py-2 px-2 bg-sky-100 text-sky-500 border border-sky-200 rounded-lg focus:border-sky-500">
-                                <i class="fas fa-arrow-rotate-left"></i> Reset </button>
+                                class="w-full py-2 px-2 bg-sky-100 text-sky-500 border border-sky-200 rounded-lg focus:border-sky-500"
+                                @click="resetFilter">
+                                <i class="fas fa-arrow-rotate-left"></i> Reset
+                            </button>
                         </div>
-
                     </div>
                 </div>
+
 
                 <!-- table data -->
                 <div class="overflow-x-auto grid grid-cols-1 w-full ">
@@ -131,21 +144,24 @@
                 </div>
 
                 <!-- Tombol untuk navigasi paginasi -->
-                <!-- <div class="flex gap-2 justify-end mt-2">
-                        <div class="">
-                            <select class="px-1 py-2 rounded-md border" id="limit" v-model="limit" @change="changeLimit">
-                                <option v-for="option in limitOptions" :key="option" :value="option">{{ option }}</option>
-                            </select>
-                        </div>
-                        <div
-                            class="bg-sky-200 px-2 py-1 rounded-md border border-sky-300 hover:bg-sky-500 hover:text-white hover:border-sky-500 focus:bg-sky-700">
-                            <button @click="previousPage" :disabled="payload.start === 0">Previous</button>
-                        </div>
-                        <div
-                            class="bg-sky-200 px-2 py-1 rounded-md border border-sky-300 hover:bg-sky-500 hover:text-white hover:border-sky-500 focus:bg-sky-700">
-                            <button @click.prevent="nextPage" :disabled="alumni.data.length < payload.length">Next</button>
-                        </div>
-                    </div> -->
+                <div class="flex gap-2 justify-end mt-2">
+                    <div class=" bg-gray-50 px-4 rounded-md border border-gray-300 hover:border-sky-500 focus:bg-sky-700">
+                        <label for="px-2 py-1">Limit Data</label>
+                        <select class="px-1 py-2 h-full" id="limit" v-model="limit" @change="changeLimit">
+                            <option v-for="option in limitOptions" :key="option" :value="option">{{ option }}</option>
+                        </select>
+                    </div>
+                    <div
+                        class="bg-gray-50 px-2 py-1 rounded-md border border-gray-300 hover:border-sky-500 focus:bg-sky-700">
+                        <button @click="previousPage" :disabled="payload.page === 1"><i
+                                class="fas fa-chevron-left"></i></button>
+                    </div>
+                    <div
+                        class="bg-gray-50 px-2 py-1 rounded-md border border-gray-300 hover:border-sky-500 focus:bg-sky-700">
+                        <button @click.prevent="nextPage" :disabled="submission.data.data < payload.page"><i
+                                class="fas fa-chevron-right self-center"></i></button>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -159,37 +175,95 @@ import { useSubmission } from "@/store/pengumuman";
 
 const submission = useSubmission()
 
-const selectedYear = ref('');
+let nama = '';
+let sesi = '';
+let selectedYear = '';
 const years = ref([]);
 
-onMounted(() => {
+let limit = ref(10) // Default limit
+let page = ref(1); // Default page
+const limitOptions = [5, 10, 20, 50, 100];
+let total_page = ref(null); // Gunakan ref untuk memastikan reactive
+
+const previousPage = () => {
+    if (payload.page > 1) {
+        payload.page--;
+        getDataAndSubmit();
+    }
+};
+
+const changeLimit = () => {
+    payload.limit = limit;
+    payload.page = 1; // Reset start when changing limit
+    getDataAndSubmit();
+};
+
+
+// onMounted(() => {
+//     populateYears();
+//     getDataAndSubmit();
+// });
+
+onMounted(async () => {
+    // Menunggu getData selesai
+    await getDataAndSubmit();
     populateYears();
+    // Setelah getData selesai, total_page diisi dengan nilai yang sesuai
+    total_page.value = submission.data.total_pages;
 });
 
 function populateYears() {
     const currentYear = new Date().getFullYear();
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         years.value.push(currentYear - i);
     }
 }
 
-function handleChange() {
-    // Fungsi yang akan dijalankan saat dropdown berubah
-    console.log("Tahun berubah:", selectedYear.value);
+function setFilter(selectedSesi) {
+    // Mengatur nilai sesi di dalam komponen
+    sesi = selectedSesi.toString();
 }
 
 const payload = {
-    nama: "",
-    sesi: "",
-    tahun: "",
-    limit: 5,
-    page: 1
-}
+    nama: '',
+    sesi: '',
+    tahun: '',
+    limit: limit.value,
+    page: page.value
+};
 
-const getData = async () => {
+const getDataAndSubmit = async () => {
+    // Kumpulkan nilai filter
+    const payload = {
+        nama: nama,
+        sesi: sesi,
+        tahun: selectedYear,
+        limit: limit.value,
+        page: page.value
+    };
+
+    // Eksekusi API
     await submission.getData(payload);
 };
 
-getData();
+const nextPage = () => {
+    console.log(page.value + "payload.page");
+    console.log(total_page.value + "total_page.value");
+    if (page.value < total_page.value) {
+        page.value++;
+        getDataAndSubmit();
+    }
+};
+
+const resetFilter = () => {
+    // Reset nilai filter jika diperlukan
+    nama = '';
+    sesi = '';
+    selectedYear = '';
+
+    submission.getData(payload);
+};
+
+submission.getData(payload);
 
 </script>
