@@ -47,8 +47,8 @@
                 <div class="md:flex justify-between pt-10">
                     <div class="md:flex gap-2">
                         <div class="w-full md:w-52 mb-2">
-                            <select class=" w-full p-[9px] border border-sky-200 rounded-lg focus:border-sky-500" id="tahun"
-                                v-model="selectedYear" @change="handleChange">
+                            <select class=" w-full p-[11px] border border-sky-200 rounded-lg focus:border-sky-500"
+                                id="tahun" v-model="selectedYear" @change="handleChange">
                                 <option value="" disabled selected>Tahun</option>
                                 <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
                             </select>
@@ -64,7 +64,7 @@
 
                         </div>
                         <div class="md:w-80">
-                            <input class="p-[9px] border border-sky-200 rounded-lg focus:border-sky-500 mb-2 w-full"
+                            <input class="p-[10px] border border-sky-200 rounded-lg focus:border-sky-500 mb-2 w-full"
                                 type="text" placeholder="Nama Mahasiswa">
                         </div>
 
@@ -117,7 +117,7 @@
                                 </td>
                                 <td :class="{ 'text-sky-500': d.nilai > 40, 'text-green-500': d.nilai > 30, 'text-orange-500': d.nilai < 30, 'text-red-500': d.nilai < 20 }"
                                     class="p-4 w-10 text-center">
-                                    {{ d.nilai === 0 ? "Tidak ada nilai" : d.nilai }}
+                                    {{ d.nilai === 0 ? "--" : d.nilai }}
                                 </td>
                                 <td class="p-4 w-20">
                                     <div :class="{ 'bg-sky-100 text-sky-600': d.status === 'Diterima', 'bg-red-100 text-red-600': d.status === 'Ditolak' }"
