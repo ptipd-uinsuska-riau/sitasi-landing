@@ -83,4 +83,32 @@ const axiosSitasiGet = (url) => {
 
     return instance.get(url);
 }
-export { axiosPost, axiosGet, axiosSitasiGet };
+
+const axiosSitasiPost = (url, payload) => {
+    // proses ngamanggil variabel dari env
+    const config = useRuntimeConfig();
+    const defaultURL = config.public.apiURLSITASI;
+    const apiKEY = config.public.apiKEYSITASI;
+
+    const instance = axios.create({
+        baseURL: defaultURL,
+        headers: {
+            common: {
+                "Api-Key": apiKEY,
+            },
+        },
+        timeout: 120000,
+    });
+
+    instance.interceptors.response.use(
+        (response) => {
+            return response;
+        },
+        (error) => {
+            return error.response;
+        }
+    );
+
+    return instance.post(url, payload);
+};
+export { axiosPost, axiosGet, axiosSitasiGet, axiosSitasiPost };

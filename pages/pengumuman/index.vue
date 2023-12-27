@@ -46,7 +46,7 @@
                 <p>Anda memilih tahun: {{ selectedYear }}</p>
                 <div class="md:flex justify-between pt-10">
                     <div class="md:flex gap-2">
-                        <div class="w-full md:w-40 mb-2">
+                        <div class="w-full md:w-52 mb-2">
                             <select class=" w-full p-[9px] border border-sky-200 rounded-lg focus:border-sky-500" id="tahun"
                                 v-model="selectedYear" @change="handleChange">
                                 <option value="" disabled selected>Tahun</option>
@@ -54,21 +54,24 @@
                             </select>
                         </div>
 
-                        <div class="flex gap-2 text-sky-500 mb-2 justify-center">
-                            <div class="">
-                                <button class="w-full  py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
-                                    1 </button>
-                            </div>
-                            <div>
-                                <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
-                                    2 </button>
-                            </div>
-                            <div>
-                                <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
-                                    3 </button>
-                            </div>
+                        <div class="grid grid-cols-3 md:flex gap-2 text-sky-500 mb-2 justify-center w-full">
+                            <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
+                                1 </button>
+                            <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
+                                2 </button>
+                            <button class="w-full py-2 px-2 border border-sky-200 rounded-lg focus:border-sky-500">Sesi
+                                3 </button>
+
+                        </div>
+                        <div class="md:w-80">
+                            <input class="p-[9px] border border-sky-200 rounded-lg focus:border-sky-500 mb-2 w-full"
+                                type="text" placeholder="Nama Mahasiswa">
                         </div>
 
+
+                    </div>
+
+                    <div class="md:flex gap-2">
                         <div class="mb-2">
                             <button
                                 class="w-full py-2 px-2 bg-sky-400 text-white border border-sky-200 rounded-lg focus:border-sky-500">
@@ -80,11 +83,7 @@
                                 class=" w-full py-2 px-2 bg-sky-100 text-sky-500 border border-sky-200 rounded-lg focus:border-sky-500">
                                 <i class="fas fa-arrow-rotate-left"></i> Reset </button>
                         </div>
-                    </div>
 
-                    <div class=" p-[9px] border border-sky-200 rounded-lg focus:border-sky-500 mb-2">
-                        <i class="fas fa-magnifying-glass text-gray-400 mr-7"></i>
-                        <input class="" type="text" placeholder="Cari Nama Mahasiswa">
                     </div>
                 </div>
 
