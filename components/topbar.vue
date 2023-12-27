@@ -13,7 +13,7 @@
                         <li><a href="/alur/" class="hover:text-sky-800">Alur</a></li>
                         <li><a href="#" class="hover:text-sky-800">Tugas Akhir</a></li>
                         <li><a href="#" class="hover:text-sky-800">Jadwal Sesi</a></li>
-                        <li><a href="#" class="hover:text-sky-800">Seleksi Judul</a></li>
+                        <li><a href="/pengumuman/" class="hover:text-sky-800">Seleksi Judul</a></li>
                         <li><a href="/survei/" class="hover:text-sky-800">Survei Pengguna</a></li>
                     </ul>
                 </div>
