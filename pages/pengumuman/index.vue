@@ -116,7 +116,9 @@
                                     <p class="capitalize text-sm">{{ d.judul }}</p>
                                 </td>
                                 <td :class="{ 'text-sky-500': d.nilai > 40, 'text-green-500': d.nilai > 30, 'text-orange-500': d.nilai < 30, 'text-red-500': d.nilai < 20 }"
-                                    class="p-4 w-10 text-center">{{ d.nilai }}</td>
+                                    class="p-4 w-10 text-center">
+                                    {{ d.nilai === 0 ? "Tidak ada nilai" : d.nilai }}
+                                </td>
                                 <td class="p-4 w-20">
                                     <div :class="{ 'bg-sky-100 text-sky-600': d.status === 'Diterima', 'bg-red-100 text-red-600': d.status === 'Ditolak' }"
                                         class="rounded-full py-1 px-2  w-20 text-sm text-center">
