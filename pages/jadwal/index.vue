@@ -52,7 +52,7 @@
                         terkini dan cek halaman serta informasi secara berkala</p>
 
                     <div class="hidden md:block absolute bottom-0 right-0 z-90">
-                        <img src="../../jadwal.png" alt="jadwal">
+                        <img src="../../public/jadwal.png" alt="jadwal">
                     </div>
                 </div>
             </div>
