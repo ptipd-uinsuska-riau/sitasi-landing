@@ -1,13 +1,6 @@
 <template>
     <div>
-        <h1 style="font-family: 'Hind', sans-serif;
-      font-size:50px;
-      line-height:60px;
-      font-weight:700;
-      margin: 15px;
-      padding: 80px 50px;">Check the FAB<br>to the right<br> 👉</h1>
-
-        <div class="ba-we-love-subscribers-wrap">
+        <div class="container-floating">
             <div class="ba-we-love-subscribers popup-ani" :class="{ 'open': isFormOpen }">
                 <header>
                     <h1>Ada seratus??</h1>
@@ -17,7 +10,6 @@
                 <form action="" method="post" @submit.prevent="openPopup">
                     <input class="border border-sky-200 px-2 py-2 shadow-md" v-model="email" type="email">
                     <input class="logo-ani" name="submit" type="submit">
-                    <input name="uri" type="hidden" value="barreldotim">
                 </form>
             </div>
             <div class="ba-we-love-subscribers-fab" @click="toggleFab">
@@ -188,7 +180,7 @@ const toggleFab = () => {
     /*Bootstrap Overide*/
 }
 
-.ba-we-love-subscribers-wrap {
+.container-floating {
     position: fixed;
     right: 25px;
     bottom: 25px;
