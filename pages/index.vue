@@ -312,7 +312,8 @@
                 <h1 class="text-2xl md:text-7xl my-4 font-thin" data-aos="fade-up">with anything?</h1>
                 <div class="md:flex justify-between" data-aos="fade-up">
                     <div class="my-10 md:my-20 ">
-                        <nuxt-link class="text-sky-500" to="/">Gabung ke grup diskusi SITASI</nuxt-link>
+                        <a href="https://t.me/joinchat/VzNaQtwBK3fy0vuL" target="_blank" class="text-sky-500">Gabung
+                            ke grup diskusi SITASI</a>
                         <div class="md:w-2/4 mt-7">
                             <p class="w-full">Jl. H.R. Soebrantas KM. 15 No. 155 Tuah Madani Kec. Tuah Madani – Pekanbaru
                                 28298
@@ -332,11 +333,13 @@
             </div>
         </div>
 
+        <fab />
 
         <!-- footer -->
         <div class="md:flex justify-end px-5 py-4 border-t bg-slate-100">
             <div class="self-center">
-                <p>copyright prodi sistem informasi 2018</p>
+                <p>&copy;2023 Prodi Sistem Informasi. All rights
+                    reserved</p>
             </div>
         </div>
 
