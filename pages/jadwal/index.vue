@@ -16,8 +16,8 @@
 
                 <!-- judul -->
                 <div class="pt-2 pb-4">
-                    <h1 class="py-4 font-bold">Batas Pengajuan Judul Proposal</h1>
-                    <div class="grid grid-cols-3 gap-1 text-sky-500 md:w-1/4">
+                    <h1 class="py-4 font-bold" data-aos="zoom-in">Batas Pengajuan Judul Proposal</h1>
+                    <div class="grid grid-cols-3 gap-1 text-sky-500 md:w-1/4" data-aos="fade-up">
                         <div class="text-center w-auto bg-white py-2 rounded-md shadow-md">
                             <h1 class="text-4xl font-bold">23</h1>
                             <p>00</p>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="pt-2 pb-4 relative z-30">
+                <div class="pt-2 pb-4 relative z-30" data-aos="zoom-in">
                     <h1 class="py-4 font-bold">Pelaksanaan Seminar dan Sidang Tugas Akhir</h1>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:w-3/4">
                         <div v-for="i in 4" :key="i"
@@ -44,7 +44,7 @@
                     </div>
                 </div>
 
-                <div class="pt-20 relative ">
+                <div class="pt-20 relative" data-aos="zoom-in">
                     <p class="md:w-2/4 text-sm text-default z-30">Informasi mengenai sesi pelaksanaan tugas akhir dapat
                         berubah
                         sewaktu waktu, harap
