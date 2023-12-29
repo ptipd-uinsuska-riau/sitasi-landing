@@ -44,7 +44,18 @@ export const useAlumni = defineStore('alumni', {
                 if (payload.mode !== 'next') {
                     this.data = []
                 }
-                this.error = error
+                if (error.response) {
+                    // Respons diterima dengan status kesalahan
+                    this.error = error.response.data.message || 'Terjadi kesalahan pada server.';
+                } else if (error.request) {
+                    // Tidak ada respons dari server
+                    console.error('Tidak dapat terhubung ke server:', error.message);
+                    this.error = 'Tidak dapat terhubung ke server. Silakan coba lagi nanti.';
+                } else {
+                    // Kesalahan lainnya
+                    console.error('Terjadi kesalahan:', error.message);
+                    this.error = 'Terjadi kesalahan. Silakan coba lagi nanti.';
+                }
             }
         },
         async getDetail(payload) {
@@ -60,7 +71,18 @@ export const useAlumni = defineStore('alumni', {
                 this.loading = false
             } catch (error) {
                 this.loading = false
-                this.error = error
+                if (error.response) {
+                    // Respons diterima dengan status kesalahan
+                    this.error = error.response.data.message || 'Terjadi kesalahan pada server.';
+                } else if (error.request) {
+                    // Tidak ada respons dari server
+                    console.error('Tidak dapat terhubung ke server:', error.message);
+                    this.error = 'Tidak dapat terhubung ke server. Silakan coba lagi nanti.';
+                } else {
+                    // Kesalahan lainnya
+                    console.error('Terjadi kesalahan:', error.message);
+                    this.error = 'Terjadi kesalahan. Silakan coba lagi nanti.';
+                }
             }
         },
 
@@ -76,8 +98,19 @@ export const useAlumni = defineStore('alumni', {
                 }
                 this.loading = false
             } catch (error) {
-                this.loading = false
-                this.error = error
+                // Handle error here
+                if (error.response) {
+                    // Respons diterima dengan status kesalahan
+                    this.error = error.response.data.message || 'Terjadi kesalahan pada server.';
+                } else if (error.request) {
+                    // Tidak ada respons dari server
+                    console.error('Tidak dapat terhubung ke server:', error.message);
+                    this.error = 'Tidak dapat terhubung ke server. Silakan coba lagi nanti.';
+                } else {
+                    // Kesalahan lainnya
+                    console.error('Terjadi kesalahan:', error.message);
+                    this.error = 'Terjadi kesalahan. Silakan coba lagi nanti.';
+                }
             }
         }
     }

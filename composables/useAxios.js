@@ -21,7 +21,16 @@ const axiosPost = (url, payload) => {
             return response;
         },
         (error) => {
-            return error.response;
+            // Handle error here
+            if (!error.response) {
+                // Kesalahan tanpa respons dari server (API mungkin dimatikan)
+                console.error("Tidak dapat terhubung ke server:", error.message);
+                // Lakukan penanganan tambahan sesuai kebutuhan, misalnya, tampilkan pesan kesalahan kepada pengguna.
+                throw new Error("Tidak dapat terhubung ke server. Silakan coba lagi nanti.");
+            }
+
+            // Jika respons dari server diterima, tetapi memiliki status kesalahan
+            return Promise.reject(error.response);
         }
     );
 
@@ -49,7 +58,16 @@ const axiosGet = (url) => {
             return response;
         },
         (error) => {
-            return error.response;
+            // Handle error here
+            if (!error.response) {
+                // Kesalahan tanpa respons dari server (API mungkin dimatikan)
+                console.error("Tidak dapat terhubung ke server:", error.message);
+                // Lakukan penanganan tambahan sesuai kebutuhan, misalnya, tampilkan pesan kesalahan kepada pengguna.
+                throw new Error("Tidak dapat terhubung ke server. Silakan coba lagi nanti.");
+            }
+
+            // Jika respons dari server diterima, tetapi memiliki status kesalahan
+            return Promise.reject(error.response);
         }
     );
 
@@ -77,7 +95,16 @@ const axiosSitasiGet = (url) => {
             return response;
         },
         (error) => {
-            return error.response;
+            // Handle error here
+            if (!error.response) {
+                // Kesalahan tanpa respons dari server (API mungkin dimatikan)
+                console.error("Tidak dapat terhubung ke server:", error.message);
+                // Lakukan penanganan tambahan sesuai kebutuhan, misalnya, tampilkan pesan kesalahan kepada pengguna.
+                throw new Error("Tidak dapat terhubung ke server. Silakan coba lagi nanti.");
+            }
+
+            // Jika respons dari server diterima, tetapi memiliki status kesalahan
+            return Promise.reject(error.response);
         }
     );
 
@@ -105,7 +132,16 @@ const axiosSitasiPost = (url, payload) => {
             return response;
         },
         (error) => {
-            return error.response;
+            // Handle error here
+            if (!error.response) {
+                // Kesalahan tanpa respons dari server (API mungkin dimatikan)
+                console.error("Tidak dapat terhubung ke server:", error.message);
+                // Lakukan penanganan tambahan sesuai kebutuhan, misalnya, tampilkan pesan kesalahan kepada pengguna.
+                throw new Error("Tidak dapat terhubung ke server. Silakan coba lagi nanti.");
+            }
+
+            // Jika respons dari server diterima, tetapi memiliki status kesalahan
+            return Promise.reject(error.response);
         }
     );
 
