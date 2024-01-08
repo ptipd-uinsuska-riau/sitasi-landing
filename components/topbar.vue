@@ -7,15 +7,15 @@
                     <h2 class="self-center text-3xl text-sky-500"><strong>SITASI</strong></h2>
                     <div class="self-center ml-9 flex-9">
                         <ul class="flex gap-6 text-default">
-                            <li><a href="/" class="hover:text-sky-800">Beranda</a></li>
+                            <li><nuxt-link to="/" class="hover:text-sky-800">Beranda</nuxt-link></li>
                             <li class="flex gap-2">
-                                <a href="/berkas/" class="hover:text-sky-800">Berkas</a>
+                                <nuxt-link to="/berkas/" class="hover:text-sky-800">Berkas</nuxt-link>
                             </li>
-                            <li><a href="/alur/" class="hover:text-sky-800">Alur</a></li>
-                            <li><a href="#" class="hover:text-sky-800">Tugas Akhir</a></li>
-                            <li><a href="/jadwal/" class="hover:text-sky-800">Jadwal Sesi</a></li>
-                            <li><a href="/pengumuman/" class="hover:text-sky-800">Seleksi Judul</a></li>
-                            <li><a href="/survei/" class="hover:text-sky-800">Survei Pengguna</a></li>
+                            <li><nuxt-link to="/alur/" class="hover:text-sky-800">Alur</nuxt-link></li>
+                            <li><nuxt-link to="#" class="hover:text-sky-800">Tugas Akhir</nuxt-link></li>
+                            <li><nuxt-link to="/jadwal/" class="hover:text-sky-800">Jadwal Sesi</nuxt-link></li>
+                            <li><nuxt-link to="/pengumuman/" class="hover:text-sky-800">Seleksi Judul</nuxt-link></li>
+                            <li><nuxt-link to="/survei/" class="hover:text-sky-800">Survei Pengguna</nuxt-link></li>
                         </ul>
                     </div>
                 </div>
@@ -50,15 +50,15 @@
             <div v-if="showMobileMenu" class="bg-white p-4 text-black">
                 <!-- Mobile menu items -->
                 <div class="text-default">
-                    <a href="/" class="block py-2 hover:text-sky-800">Beranda</a>
+                    <nuxt-link to="/" class="block py-2 hover:text-sky-800">Beranda</nuxt-link>
                     <div class="flex flex-col gap-2">
-                        <a href="/berkas/" class="block py-2 hover:text-sky-800">Berkas</a>
+                        <nuxt-link to="/berkas/" class="block py-2 hover:text-sky-800">Berkas</nuxt-link>
                     </div>
-                    <a href="/alur/" class="block py-2 hover:text-sky-800">Alur</a>
-                    <a href="#" class="block py-2 hover:text-sky-800">Tugas Akhir</a>
-                    <a href="/jadwal/" class="block py-2 hover:text-sky-800">Jadwal Sesi</a>
-                    <a href="/pengumuman/" class="block py-2 hover:text-sky-800">Seleksi Judul</a>
-                    <a href="/survei/" class="block py-2 hover:text-sky-800">Survei Pengguna</a>
+                    <nuxt-link to="/alur/" class="block py-2 hover:text-sky-800">Alur</nuxt-link>
+                    <nuxt-link to="#" class="block py-2 hover:text-sky-800">Tugas Akhir</nuxt-link>
+                    <nuxt-link to="/jadwal/" class="block py-2 hover:text-sky-800">Jadwal Sesi</nuxt-link>
+                    <nuxt-link to="/pengumuman/" class="block py-2 hover:text-sky-800">Seleksi Judul</nuxt-link>
+                    <nuxt-link to="/survei/" class="block py-2 hover:text-sky-800">Survei Pengguna</nuxt-link>
                 </div>
             </div>
         </div>
